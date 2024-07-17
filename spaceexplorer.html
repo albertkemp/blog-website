@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Space explorer - Albert Kemp</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/spaceexplorer.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="icona" id="icona" title="Home - Albert Kemp">
+        <img src="images/rocket_landed.png" width="75">
+    </div>
+    <div class="article">
+        <!--Article below this comment-->
+    <img src="images/spaceexplorer.png" width="400">
+    <h2>Development notes from <a target="_blank" href="https://albertkemp.github.io/space-explorer">Space Explorer</a></h2>
+    <p>12 Jul 2024</p>
+<p>Probably my most complicated game and one of my most ambitious projects is <a target="_blank" href="https://albertkemp.github.io/space-explorer">Space Explorer</a>, a 2d black and white multiplayer space exploration game. That is, it will eventually be multiplayer but at the time of this writing the multiplayer functionality has not been finished yet.</p>
+<p>You can visit it at <a target="_blank" href="https://albertkemp.github.io/space-explorer">https://albertkemp.github.io/space-explorer</a></p>
+<p><b>Credit: The idea of a 2d game where you explore planets is heavily inspired by xkcd's Gravity and Escape speed April fools comics (which I am a fan of) but I created the code and drawings myself.</b></p>
+<p>How I created this is a HTML document with a div element as my canvas, then I just used a photo of stars as the background image and the javascript is some simple physics manipulating the background-position CSS element to simulate movement. I know it is almost certainly not the most efficient or best way to create something like this but since I have very simple requirements and am familiar with this sort of code I like how it is currently.</p>
+<video src="videos/videopalm.mov" autoplay loop controls width="400"></video>
+<p>One of the many problems I faced is that I would like to have the screen rotate so that down is the direction of the planet but I initially just had is the planets rotating which is very annoying and weird.</p>
+<h3>How I will implement multiplayer</h3>
+<p>The multiplayer part is a challenge and I am well aware that the solution I came up with is not the best, but an easy simple fix for some more intermediate rather than advanced programming. My idea was to use a Google Sheet as a database, instead of investing time in something more complicated. The basic idea is to push the x and y coordinates of each player to the sheet once every second and load the player positions every second. This would allow a very glitchy setup with lags for each time the user changes position, but I could figure out how to smoothly animate it and this is only designed to be a game for a few users anyway.</p>
+<p>Even using Google Sheets as a database was challenging since I had to install all of these requirements for the api library before starting. The code to write to spreadsheets is not the easiest as well.</p>
+<div class="image-container" style="display: flex;">
+    <img src="images/hole.png" width="300">
+    <img src="images/ocean.png" width="300">
+</div>
+<h3>Image drawing</h3>
+<p>Another one of the problems that I faced was how I would draw the images. What I ended up doing was drawing them on an iPad with an apple pencil on an app called Linearity Curve. Then I exported them to SVG images and added them into the game. The SVG images are really nice since they allow the planets to be very large and zoomed in and still have high resolution. This works really nicely so if I want to have a massive planet where you only see a tiny view of it, it would still be full resolution.</p>
+<p>Navigation in space is hard and very easy to get lost. Even though the positions of my planets are very close to each other, it is still easy to fly off into space without being able to find anything. My solution was to create a map (as you can see in the video earlier in the page). This indicates the location of the planets relative to the rocket and also their size. My solution was to create a map that you can open up which shows the positions of all of the planets and the current position and rotation of the rocket.</p>
+<h3>List of planets:</h3>
+<button onclick="toggleList()" id="showbutton">Show list</button>
+
+
+<div id="hidden" style="display:none;">
+<ul>
+    <li>Tiny planet: a tiny planet which is the starting planet where the rocket starts out</li>
+    <li>Planet1 (also known as Earth): A normal sized earth planet that located below the starting planet</li>
+    <li>China: A normal sized planet featuring many objects found in China. It is located northeast of tiny planet.</li>
+    <li>Other planet: A normal sized planet similar to Earth. Located to the left of Earth.</li>
+    <li>Planet2: A normal sized planet similar to Earth and other planet. Located to the right of Earth.</li>
+    <li>Giant spider: A giant spider floating in space</li>
+    <li>Spaceship: A large spaceship in space</li>
+    <li>Labyrinth: A winding maze located below Earth</li>
+    <li>Hole planet: An interesting planet with a tunnel leading to a large  hole in the center. Located above and right of Planet2</li>
+    <li>Tunnel planet: A large planet with a tunnel going in on one side and coming out the other side. Located to the very right of the map</li>
+    <li>Desert planet: A smaller planet with only natural items.</li>
+    <li>Farm planet: A smaller planet with items found on the farm</li>
+    <li>City planet: A large planet directly above the starting planet with a sewer</li>
+    <li>Airport planet: A large hollow planet located at the very left side of the map, inside there are many planes parked and outside signs for different airline terminals.</li>
+
+</ul></div>
+
+<!--Article above this comment-->
+<br><div style="width:100%;border-bottom:1px black;border-bottom-style: dashed;"></div><br>
+    <ul style="list-style: none;">
+        <li><a href="spaceexplorer.html" style="color:grey;text-decoration: underline;">12 Jul 2024 Development notes from Space Explorer</a></li>
+        <li><a href="banananews.html" style="color:grey;text-decoration: underline;">13 Jul 2024 Banana News</a></li>
+        <li><a href="flight.html" style="color:grey;text-decoration: underline;">13 Jul 2024 Flight review - Thai Airways TG466 Melbourne to Bangkok</a></li>
+    </ul>
+</div>
+<script>
+    function toggleList() {
+        var list = document.getElementById('hidden');
+        if (list.style.display === 'none') {
+            list.style.display = 'block';
+            document.getElementById('showbutton').innerHTML = 'Hide list';
+
+        } else {
+            list.style.display = 'none';
+            document.getElementById('showbutton').innerHTML = 'Show list';
+        }
+    }
+</script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
