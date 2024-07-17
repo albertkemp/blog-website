@@ -11,6 +11,8 @@ p, ul, li{font-size: 16px;font-family: Arial, sans-serif;}
 .article{width:60%;margin:auto;}
 img{display:block;margin:auto;}
 video{display:block;margin:auto;}
+.github-icon{position:fixed;top:25px;left:100px;}
+.github-icon:hover{cursor:pointer;}
 @media (max-width:768px){
     .article{width:90%;}
 }
