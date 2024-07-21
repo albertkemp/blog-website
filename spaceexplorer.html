@@ -38,7 +38,7 @@
 <p>The size of the "game map" is a 400,000,000 square pixel square, which I thought was big enough but it is still pretty small and doesn't take long to fly from one side to another. The game only shows a little window of the broad map, with the planets coming into view at their respective positions, manipulated by the Javascript. The planets are actually each just single SVG images which are much easier to implement into a game than trying to render something with "tiles" of .png images. This allows me to simply have 1 image for each planet and no fancy programs.</p>
 <h3>Implementing multiplayer</h3>
 <p>A lot of authentication was required to set up the google spreadsheet authentication. Basically, there's a library called google-spreadsheet which allows you to read and write values to the spreadsheet. Then, I started by creating a comments section, which would write new comments and then read them and display them in a HTML page.</p>
-<video src="videos/spreadsheetread.mov" autoplay loop controls width="400"></video>
+<video src="videos/comments.mov" autoplay loop controls width="400"></video>
 <p>So far, comments that are in the spreadsheet are written to a HTML page automatically, after you click thee show comments buttons. Trying to make the functions execute automatically did not work so for now I will just have to have an automatic google login window popup, then click a button to view the comments (they are formatted weirdly but who cares)</p>
 <h3>List of planets:</h3>
 <button onclick="toggleList()" id="showbutton">Show list</button>
