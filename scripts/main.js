@@ -4,3 +4,6 @@ document.getElementById('icona').addEventListener("click", function(){
 document.getElementById("githubicon").addEventListener("click", function(){
     window.open('https://github.com/albertkemp', '_blank');
 });
+document.getElementById("repliticon").addEventListener("click", function(){
+    window.open('https://replit.com/@albertkemp', '_blank');
+});
