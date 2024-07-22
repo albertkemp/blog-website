@@ -14,6 +14,7 @@ video{display:block;margin:auto;}
 .github-icon{position:fixed;top:25px;left:100px;}
 .github-icon:hover{cursor:pointer;}
 #repliticon{position:fixed;top:25px;left:150px;}
+#repliticon:hover{cursor:pointer;}
 @media (max-width:768px){
     .article{width:90%;}
 }
