@@ -40,7 +40,9 @@
 <h3>Implementing multiplayer</h3>
 <p>A lot of authentication was required to set up the google spreadsheet authentication. Basically, there's a library called google-spreadsheet which allows you to read and write values to the spreadsheet. Then, I started by creating a comments section, which would write new comments and then read them and display them in a HTML page.</p>
 <video src="videos/comments.mov" autoplay loop controls width="600"></video>
-<p>The key is requested and you have to login to authorize you and check if you have access (this seemed necessary but I definitely would prefer not to have to login and setup accounts. Everything is automatically run -  it's just a login and then comments displayed. Implementing it into the game , I feel I should just manually add google accounts which are users to add to my game. I might start with a game with me and someone else's google account, then continue by adding more people's accounts. </p>
+<p>The key is requested and you have to login to authorize you and check if you have access (this seemed necessary but I definitely would prefer not to have to login and setup accounts). Everything is automatically run -  it's just a login and then comments displayed. Implementing it into the game , I feel I should just manually add google accounts which are users to add to my game. I might start with a game with me and someone else's google account, then continue by adding more people's accounts. </p>
+<p>After figuring out how to write and read to spreadsheets from HTML, I created a simple webpage with a square that you can control around the page. Then, it writes the current coordinates of the player to the spreadsheet every second, using the <code>setInterval()</code> function. There is also meant to be another page where it reads the current position and updates the position of the square but that is not working so far.</p>
+<video autoplay loop controls width="400" src="videos/squaretosheet.mov"></video>
 <h3>List of planets:</h3>
 <button onclick="toggleList()" id="showbutton">Show list</button>
 
