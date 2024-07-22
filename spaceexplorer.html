@@ -26,7 +26,7 @@
 <p>How I created this is a HTML document with a div element as my canvas, then I just used a photo of stars as the background image and the javascript is some simple physics manipulating the background-position CSS element to simulate movement. I know it is almost certainly not the most efficient or best way to create something like this but since I have very simple requirements and am familiar with this sort of code I like how it is currently.</p>
 <video src="videos/videopalm.mov" autoplay loop controls width="400"></video>
 <p>One of the many problems I faced is that I would like to have the screen rotate so that down is the direction of the planet but I initially just had is the planets rotating which is very annoying and weird.</p>
-<h3>How I will implement multiplayer</h3>
+
 <p>The multiplayer part is a challenge and I am well aware that the solution I came up with is not the best, but an easy simple fix for some more intermediate rather than advanced programming. My idea was to use a Google Sheet as a database, instead of investing time in something more complicated. The basic idea is to push the x and y coordinates of each player to the sheet once every second and load the player positions every second. This would allow a very glitchy setup with lags for each time the user changes position, but I could figure out how to smoothly animate it and this is only designed to be a game for a few users anyway.</p>
 <p>Even using Google Sheets as a database was challenging since I had to install all of these requirements for the api library before starting. The code to write to spreadsheets is not the easiest as well.</p>
 <div class="image-container" style="display: flex;">
