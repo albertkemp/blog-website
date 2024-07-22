@@ -13,6 +13,7 @@ img{display:block;margin:auto;}
 video{display:block;margin:auto;}
 .github-icon{position:fixed;top:25px;left:100px;}
 .github-icon:hover{cursor:pointer;}
+#repliticon{position:fixed;top:25px;left:150px;}
 @media (max-width:768px){
     .article{width:90%;}
 }
