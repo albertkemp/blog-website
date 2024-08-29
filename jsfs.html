@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>JSFS 3D - My new flight simulator - Albert Kemp</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/logo.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="icona" id="icona" title="Home - Albert Kemp">
+        <img src="images/rocket_landed.png" width="75">
+    </div>
+    <div class="article">
+    <img src="images/a380.png" width="400">
+   <h2>JSFS 3D Flight Simulator</h2>
+    <p>29 Aug 2024</p>
+    <p>One day I started thinking about flight simulators, remembering my many attempts last year at making them, from my horrible up down left right scratch flight sims at the start of 2023, to the 2d flight simulator made with the p5js library I was so proud of. And I decided to make a 3D flight simulator. At that time, I had no idea what I would do except that I wanted to use Sketchfab 3D models.</p>
+    <p>Yesterday, I realized I could use the Threejs library which I had previously lookeed into but only with a simple green square model. So I asked ChatGPT how I could preview a sketchfab .gltf file in a HTML page using threejs, and ChatGPT promptly gave me the code. Once I had an interactive 3D model, the rest came into place.</p>
+    <img src="images/takeoffgreen.png" width="400">
+    <p>Then I created a simple 3d scene with some cones for mountains, a giant plane for the ground and another plane (like, flat. I know it's confusing for a flight simulator) for the runways. Then I fiddled for ages about how the camera ideally should follow the aircraft, but I didn't want it to be glued into place, so I could have control over rotation and zoom. After many failed attempts, I did get the plane flying and had implemented arrow key functionality for roll, yaw and pitch.</p>
+    <p>I also experimented with various 3d planes, like 737s, a320s, 787 and 747s.</p>
+    <video src="videos/americanairlines.mov" width="400"></video>
+    <p>After a lot of fiddling I finally got the follow cam working, with rotational and zoom functionality. One problem I ran into was that certain planes were rotated in a different direction, meaning I had to adjust the specifics of how they were positioned and rotated individually.</p>
+    <p>By now there was already throttle ranging from 0-9, and I set up the texture of the terrain as a screenshot I took of Google Maps. It just looks like blurry generic landscape stuff, but I don't care. If I want detailed airports, landmarks, and just high resolution in general I'll focus on that later. </p>
+    <video src="videos/airbusa380.mov" width="400"></video>
+    <p>I also implemented collision detection with a nice touch on collision.</p>
+    <p>After carefully referencing authors of the 3d models, I had the flight simulator done and after a bunch of boring file uploading, I got it hosted on Github pages. One problem was a few planes were unable to either upload or move into the glTF folder, so now I have no 747s, but it's still a really cool flight simulator</p>
+    <img src="images/american.png" width="400">
+    <p>Lastly, I added it to Banana News, my website I talked about in a previous blog post and it got a full width link in the games page (by me).</p>
+       <br><div style="width:100%;border-bottom:1px black;border-bottom-style: dashed;"></div><br>
+       <ul style="list-style: none;">
+           <li><a href="spaceexplorer.html" style="color:grey;text-decoration: underline;">12 Jul 2024 Development notes from Space Explorer</a></li>
+           <li><a href="banananews.html" style="color:grey;text-decoration: underline;">13 Jul 2024 Banana News</a></li>
+           <li><a href="flight.html" style="color:grey;text-decoration: underline;">13 Jul 2024 Flight review - Thai Airways TG466 Melbourne to Bangkok</a></li>
+           <li><a href="jsfs.html" style="color:grey;text-decoration:underline;">29 Aug 2024 JSFS 3D Flight Simulator</a></li>
+           <li><a href="jsfs.html" style="color:grey;text-decoration:underline;">29 Aug 2024 JSFS 3D Flight Simulator</a></li>
+       </ul>
+   </div>
+<script src="scripts/main.js"></script>
+</body>
+</html>
